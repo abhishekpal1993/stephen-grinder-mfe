@@ -1,0 +1,28 @@
+{
+  "name": "stephen-grinder-mfe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "postinstall": "turbo telemetry disable",
+    "start": "turbo run start",
+    "build": "turbo run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephenGrider/mfe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StephenGrider/mfe/issues"
+  },
+  "homepage": "https://github.com/StephenGrider/mfe#readme",
+  "dependencies": {
+    "turbo": "^1.13.2"
+  }
+}
