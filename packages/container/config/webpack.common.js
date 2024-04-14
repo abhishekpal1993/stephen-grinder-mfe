@@ -1,6 +1,9 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  output: {
+    clean: true,
+  },
   module: {
     rules: [
       {
@@ -21,4 +24,10 @@ module.exports = {
       template: './public/index.html',
     }),
   ],
+  optimization: {
+    splitChunks: {
+      // include all types of chunks
+      chunks: 'all',
+    },
+  },
 };
