@@ -6,8 +6,7 @@
       "outputs": ["dist"]
     },
     "start": {
-      "cache": false,
-      "persistent": true
+      "cache": false
     }
   }
 }
