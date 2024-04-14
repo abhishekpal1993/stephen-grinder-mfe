@@ -23,9 +23,20 @@ export default () => {
   const [isSignedIn, setIsSignedIn] = useState(false);
 
   useEffect(() => {
+    try {
+      const cachedValue = localStorage.getItem('isSignedIn');
+      setIsSignedIn(JSON.parse(cachedValue))
+    } catch (error) {
+      console.warn('login state compromised! resetting login state....')
+    }
+  }, []);
+  
+  useEffect(() => {
     if (isSignedIn) {
       history.push('/dashboard');
     }
+
+    localStorage.setItem('isSignedIn', isSignedIn);
   }, [isSignedIn]);
 
   return (
